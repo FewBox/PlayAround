@@ -8,4 +8,5 @@ script:
  - cd $TRAVIS_BUILD_DIR/FewBox.K8S-Secrets-ConfigMaps/bin/Debug/netcoreapp2.1/publish
  - cp $TRAVIS_BUILD_DIR/Dockerfile ./
  - docker build -t fewbox/k8s-secrets-configmaps:$TRAVIS_JOB_NUMBER .
+ - docker images
  - docker push fewbox/k8s-secrets-configmaps:$TRAVIS_JOB_NUMBER
