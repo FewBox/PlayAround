@@ -1,2 +1,2 @@
 # PlayAround
-https://travis-ci.com/FewBox/PlayAround.svg?branch=master
+[![Build Status](https://travis-ci.com/FewBox/PlayAround.svg?branch=master)](https://travis-ci.com/FewBox/PlayAround)
