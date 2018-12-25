@@ -1,0 +1,11 @@
+language: csharp
+mono: none
+dotnet: 2.1.1
+install:
+ - dotnet restore
+script:
+ - dotnet publish FewBox.K8S-Secrets-ConfigMaps/FewBox.K8S-Secrets-ConfigMaps.csproj
+ - cd $TRAVIS_BUILD_DIR/FewBox.K8S-Secrets-ConfigMaps/bin/Debug/netcoreapp2.1/publish
+ - cp $TRAVIS_BUILD_DIR/Dockerfile ./
+ - docker build -t fewbox/k8s-secrets-configmaps:$TRAVIS_JOB_NUMBER .
+ - docker push fewbox/k8s-secrets-configmaps:$TRAVIS_JOB_NUMBER
