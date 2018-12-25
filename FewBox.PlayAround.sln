@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FewBox.K8S-Secrets-ConfigMaps", "FewBox.K8S-Secrets-ConfigMaps\FewBox.K8S-Secrets-ConfigMaps.csproj", "{D66AAFE3-55D8-43E1-AE45-DB38FB2AA90A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FewBox.K8S-Secrets-ConfigMaps", "FewBox.K8S-Secrets-ConfigMaps\FewBox.K8S-Secrets-ConfigMaps.csproj", "{D66AAFE3-55D8-43E1-AE45-DB38FB2AA90A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1193DA35-12D4-4C93-AB3D-B84BC6BF68C5}"
 	ProjectSection(SolutionItems) = preProject
 		.travis.yml = .travis.yml
+		appsettings.docker.json = appsettings.docker.json
 		Dockerfile = Dockerfile
+		k8s.yml = k8s.yml
 	EndProjectSection
 EndProject
 Global

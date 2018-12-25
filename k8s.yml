@@ -1,0 +1,29 @@
+# Deployment #
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: k8s-secrets-configmaps
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: k8s-secrets-configmaps
+    spec:
+      containers:
+      - name: k8s-secrets-configmaps
+        image: fewbox/k8s-secrets-configmaps:8.1
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Docker"
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent        
+        volumeMounts:
+        - name: settings
+          mountPath: /app/settings
+          readOnly: true
+      volumes:
+      - name: settings
+        secret:
+          secretName: playaround-k8s-secrets-configmaps
